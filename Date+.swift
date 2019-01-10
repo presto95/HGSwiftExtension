@@ -1,6 +1,6 @@
 import Foundation
 
-extension Date {
+public extension Date {
     static func day(beforeDays days: Int) -> Date {
         return Calendar.current.date(byAdding: .day, value: -days, to: Date()) ?? Date()
     }

@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIAlertController {
+public extension UIAlertController {
     static func alert(title: String?, message: String?, style: UIAlertController.Style = .alert) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         return alert
