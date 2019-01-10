@@ -11,7 +11,9 @@ Presto's Useful Swift Extension Collection 👨🏻‍💻
 
 Use Cocoapods.
 
-`pod 'HGSwiftExtension'`
+```ruby
+pod 'HGSwiftExtension'
+```
 
 ## License
 
