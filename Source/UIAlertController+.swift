@@ -7,8 +7,19 @@ public extension UIAlertController {
     }
     
     @discardableResult
-    func action(title: String?, style: UIAlertAction.Style = .default, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
-        let action = UIAlertAction(title: title, style: style) { handler?($0) }
+    func textField(_ configuration: ((UITextField) -> Void)? = nil) -> UIAlertController {
+        addTextField(configurationHandler: configuration)
+        return self
+    }
+    
+    @discardableResult
+    func action(title: String?, style: UIAlertAction.Style = .default, handler: ((UIAlertAction, [UITextField]?) -> Void)? = nil) -> UIAlertController {
+        guard let textFields = textFields else {
+            let action = UIAlertAction(title: title, style: style) { handler?($0, nil) }
+            addAction(action)
+            return self
+        }
+        let action = UIAlertAction(title: title, style: style) { handler?($0, textFields) }
         addAction(action)
         return self
     }
