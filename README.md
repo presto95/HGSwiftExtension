@@ -15,6 +15,48 @@ Use Cocoapods.
 pod 'HGSwiftExtension'
 ```
 
+## Use Case
+
+### UIAlertController
+
+```swift
+UIAlertController
+	.alert(title: "Title", message: "Message", style: .actionSheet)
+	.textField(nil)
+	.action(title: "Action", style: .cancel) { action, textFields in
+		if let textFields = textFields {
+			print(textFields.first?.text ?? "?")
+		}
+	}
+	.present(to: self, animated: false, handler: nil)
+```
+
+### UIViewController
+
+```swift
+UIViewController
+	.instantiate(fromStoryboard: "Main", identifier: "MainViewController")
+	.present(to: self, transitionStyle: .crossDissolve, animated: true)
+```
+
+### UIColor
+
+```swift
+let rgb80: UIColor = .init(rgb: 80)
+```
+
+### CALayer
+
+```swift
+let view = UIView()
+view.layer.applyGradient(
+    colors: [UIColor.white.cgColor, UIColor.clear.cgColor],
+    locations: [0, 1],
+    startPoint: .init(x: 0, y: 0.5),
+    endPoint: .init(x: 1, y: 0.5)
+)
+```
+
 ## License
 
 ```text
