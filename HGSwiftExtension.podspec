@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HGSwiftExtension"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "Useful Swift Extension Collection."
   spec.description  = <<-DESC
 Presto's Useful Swift Extension Collection.
