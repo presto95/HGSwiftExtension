@@ -61,8 +61,7 @@ public extension UIAlertController {
   ///
   /// - Parameters:
   ///   - title:    The title that will appear in the alert controller.
-  ///   - style:    The style of the alert action.
-  ///               The default value is `UIAlertAction.Style.default`.
+  ///   - style:    The style of the alert action. The default value is `UIAlertAction.Style.default`.
   ///   - handler:  A block to execute when the user selects the action. The default value is `nil`.
   ///
   /// - Returns: The alert controller with the alert action added.
